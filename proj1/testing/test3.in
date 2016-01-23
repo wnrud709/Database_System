@@ -1,0 +1,31 @@
+load students;
+load enrolled;
+load schedule;
+/* Create a table "Chan" that contains the last name, SID and major of all students whose last name
+     is 'Chan'. */
+create table Chan as select Lastname, SID, Major from students
+     where Lastname = 'Chan';
+/* Store that table. */
+store Chan;
+/* Print Chan. */
+print Chan;
+/* Override Chan with a table that consists of SID from enrolled. */
+create table Chan as select SID from enrolled;
+/** Store the table. */
+store Chan;
+/** print the overrode table Chan. */
+print Chan;
+/** Insert SID "107" to Chan. */
+insert into Chan values '107';
+/** Print the new table. */
+print Chan;
+/** Select SID in Chan less than "104". */
+select SID from Chan where SID < '104';
+/** Create table Chan2 with SID less than 104. */
+create table Chan2 as select SID from Chan where Chan.SID < '104';
+/** Find lastnames and firstnames of students whose SI < 104. */
+select Lastname, Firstname, Chan2.SID from Chan2, students where Chan2.SID = students.SID;
+/** Should give error because there are no quotes around 105. */
+select SID from enrolled where SID < 105;
+exit;
+

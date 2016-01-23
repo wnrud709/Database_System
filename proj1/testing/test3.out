@@ -1,0 +1,33 @@
+DB61B System.  Version 1.0
+Loaded students.db
+Loaded enrolled.db
+Loaded schedule.db
+Stored Chan.db
+Contents of Chan:
+  Chan 102 Math
+  Chan 106 LSUnd
+Stored Chan.db
+Contents of Chan:
+  101
+  102
+  103
+  104
+  105
+  106
+Contents of Chan:
+  101
+  102
+  103
+  104
+  105
+  106
+  107
+Search results:
+  101
+  102
+  103
+Search results:
+  Knowles Jason 101
+  Chan Valerie 102
+  Xavier Jonathan 103
+Error: unknown column: '105'
